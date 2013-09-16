@@ -1,0 +1,213 @@
+                               TUNNELTRACE-RS v1.0
+                               ===================
+
+What is tunneltrace?
+--------------------
+
+Tunneltrace is a tool used for detecting IPv6 in IPv4 tunnels. More precisely,
+Tunneltrace can run in 2 modes:
+Mode 1:
+  Given two IPv4 Addresses it checks if there is a tunnel between them. If there
+is evidence of the presence of a tunnel, tunneltrace outputs a confidence
+value, which provides a measure of the probability that the tunnel exists, and
+tries to determine the IPv6 addresses of the endpoints. 
+Mode 2:
+  Tunneltrace can also determine, given an IPv6 Address, the full Path from the
+node where tunneltrace is launched to the given address. From the Path 
+determined tunneltrace identifies the Path MTU and all the tunnels inside the path, and for
+each tunnel found it tries to find the IPv4 addresses of the endpoints and 
+outputs a confidence value. 
+
+Techniques used
+---------------
+
+Tunneltrace uses three techniques to detect tunnels:
+
+1) IPv4 spoofing
+2) DNS lookups
+3) Queries to the 6bone registry
+
+Each of the above techniques has a degree of confidence. The confidence value
+output by tunneltrace is the sum of the confidence values of each technique
+that succeeded.
+
+
+Brief description of the techniques
+-----------------------------------
+
+1. IPv4 spoofing
+
+These are the main techniques used by tunneltrace. By encapsulating an IPv6
+packet in an IPv4 packet having the source address of one of the tunnel
+endpoints, tunneltrace can trick the other endpoint into treating the packet as
+if it had come from the tunnel.
+
+Tunneltrace uses four spoofing techniques:
+
+    a) Injected Ping
+       Encapsulated IPv6 echo request to a pingable IPv6 interface. Used to
+       determine if there is a tunnel.
+
+    b) Dying Packet
+       Similar to the above, but injects packets with a Hop Count field of 1.
+       Used to determine the IPv6 addresses of the tunnel endpoints.
+
+    c) Ping Pong Packet
+       Similar to the above, but attempts to determine the address of one
+       endpoint if the address of the other endpoint is known.
+
+    d) Fragmented Injection
+       As Injected Ping but puts the IPv6 echo request message into three IPv4 fragments
+
+2. DNS Lookups
+
+Looks for AAAA records with the endpoint hostnames, if we are running tunneltrace in 
+mode 1.
+
+Looks for A records with the endpoint hostnames (retreived by a reverse-lookup),if we
+are running tunneltrace in mode 2.
+
+3. Queries to the 6bone registry
+
+Looks for a corresponding entry in the 6bone registries. Tunneltrace requires
+a copy of the 6bone registry file to be stored locally in /etc/6bone.db or 
+in the directory where tunneltrace is installed.
+You may download this file from ftp://whois.6bone.net/6bone/6bone.db.gz
+
+A detailed description of the techniques used can be found in the papers
+available at the URL:
+
+http://www.dia.uniroma3.it/~compunet/tunneldiscovery/tunneling-noms.pdf
+
+4) Path MTU Discovery
+
+Tunneltrace tries to send ICMPv6 packets with the MTU of the node where it is running
+and using Hop Limit manipulation for determining the Path (Modifing the HL field). 
+If it receives a ICMPv6 message of Packet-Too-Big, from that point on it will send
+packets with the MTU specified in the Packet-Too-Big messagge, until it doesn't 
+receive antoher packet too big messagge, and so on. 
+
+5) Fragmented IPv6 in IPv4 Path MTU Discovery
+
+If Tunneltrace finds on its Path a Tunnel, it tryes to use the outern endpoint of it as Vantage Point 
+for Path MTU Discovery , by creating an IPv6 Packet of the MTU of the source node in IPv4 Fragments
+of 68 bytes. So to be able to do Path MTU Discovery (and PATH TRACING with Hop Limit manipulation)
+from the Vantage Point. This repeatably for every new Vantage Point that Tunneltrace finds further
+on in the Path.
+
+How confidence values are calculated
+------------------------------------
+
+The Confidence value output by tunneltrace is calculated using the following
+criteria:
+
+Spoofing Techniques ->
+  Injected Ping success on 1 Endpoint only  : 5 Confidence Points  
+  Injected Ping success of both Endpoints   : 7 Confidence Points
+  Dying Packet success on each Endpoint     : 1 Confidence point
+  Ping Pong Packet success on one Endpoint (if Dying Packet didn't work)
+                                            : 1 Confidence point
+
+If Spoofing Techniques succeeded, then ->
+  6bone registries lookup success           : 1 Confidence points
+
+
+If no Spoofing Technique succeeded, then ->
+  DNS lookups success                             : 1 Confidence points
+  6bone registries lookup success           : 4 Confidence points
+
+
+Compiling tunneltrace
+---------------------
+
+To compile tunneltrace, run the build.sh script in the distribution.
+Compilation requires the C++ development libraries to be installed.
+
+Tunneltrace is known to compile on Linux and FreeBSD, but should also compile
+and run on other platforms such as Solaris.
+
+Tunneltrace runs on both littleEndian and bigEndian machines.
+
+Using tunneltrace
+-----------------
+
+1. Prerequisites
+
+Due to the use of spoofing techniques that require raw sockets, you must be
+root to run tunneltrace.
+
+Some of the techniques used by tunneltrace require a reference IPv6 address.
+This address must be globally routed or, at a minimum, reachable from the
+tunnel endpoints. The reference IPv6 address may be specified on the command
+line using the -h parameter or in the file /etc/tunneltrace.ip.
+
+As stated previously, tunneltrace also requires a 6bone registry dump in the
+file /etc/6bone.db or in the directory where tunneltrace is installed.
+
+You may run multiple istances of tunneltrace in parallel, since each one recognizes its
+own packets.
+
+2. Usage
+
+Tunneltrace's syntax is the following :
+
+Mode 1:
+
+tunneltrace [ -h reference IPv6 ] [ -v ] <source IPv4> <dest IPv4>
+    Where <source IPv4> AND <dest IPv4>: IPv4 addresses or hostnames
+
+Mode 2:
+
+tunneltrace [ -h reference IPv6 ] <dest IPv6>
+    Where <dest IPv6>: IPv6 address or hostname
+
+Tunneltrace exits with an error if <source IPv4> or <dest IPv4> are not valid
+IPv4 addresses or resolvable hostnames or if the reference IPv6 is not a valid
+IPv6 address or <dest IPv6> is not a valid IPv6 address or resolvable hostname
+or is not reachable.
+
+The -v option is used for generating Parametric OUTPUT (on one line) in order to 
+see the techniques that worked in detail
+
+
+Output format
+-------------
+
+The output format of tunneltrace is the following:
+
+Mode 1:
+
+# tunneltrace <source IPv4> <dest IPv4>
+
+source_host(source_IPv4) -> dest_host(dest_IPv4)
+source_IPv6 -> dest_IPv6 ; CONFIDENCE X/10
+
+Mode 2:
+
+# tunneltrace <dest IPv6>
+
+1         host_1(IPv6_1)  MTU
+2         host_2(IPv6_2)  MTU 
+source_host1(source_IPv4_1) -> dest_host2(dest_IPv4_2)
+source_IPv6_1 -> dest_IPv6_2 ; CONFIDENCE X/10
+3         host_3(IPv6_3)  MTU
+.
+.
+8         host_dest(IPv6_dest)  MTU
+If none of the techniques worked, tunneltrace will output a confidence value of
+zero and one or both of the IPv6 addresses will be shown as "unknown".
+
+
+Credits
+-------
+
+Tunneltrace was developed as part of Davide De Micco's master thesis in
+collaboration with the Computer Networks research group at Roma Tre University.
+
+Contributors are:
+
+Davide De Micco <dav1de24@gmail.com>
+Lorenzo Colitti <colitti@dia.uniroma3.it>
+Giuseppe Di Battista <gdb@dia.uniroma3.it>
+Emanuele Conti <emanuele_conti@fastwebnet.it>
+Maurizio Patrignani <patrigna@dia.uniroma3.it>
