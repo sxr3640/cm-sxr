@@ -1,0 +1,24 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 orientplus-gw.mx1.lon.uk.geant.net(2001:798:28:10aa::25) 1500
+11 ae0.mx1.par.fr.geant.net(2001:798:cc:2801:1801::2) 1500
+orientplus-gw.mx1.lon.uk.geant.net(62.40.125.101) -> ae0.mx1.par.fr.geant.net(62.40.98.77)
+s2----12001:798:28:10aa::25 -> 2001:798:cc:2801:1801::2 ; CONFIDENCE 1/10
+12 switch-bckp-gw.mx1.par.fr.geant.net(2001:798:18:10aa::e) 1500
+ae0.mx1.par.fr.geant.net(62.40.98.77) -> switch-bckp-gw.mx1.par.fr.geant.net(62.40.124.82)
+2001:798:cc:2801:1801::2 -> 2001:798:18:10aa::e ; CONFIDENCE 1/10
+13 swiGE2-10GE-3-1.switch.ch(2001:620:0:c093::2) 1500
+switch-bckp-gw.mx1.par.fr.geant.net(62.40.124.82) -> swiGE2-10GE-3-1.switch.ch(130.59.37.182)
+2001:798:18:10aa::e -> 2001:620:0:c093::2 ; CONFIDENCE 1/10
+14 swiGE2-10GE-3-1.switch.ch(2001:620:0:c093::2) 1476
+swiGE2-10GE-3-1.switch.ch(130.59.37.182) -> swiGE2-10GE-3-1.switch.ch(130.59.37.182)
+2001:620:0:c093::2 -> 2001:620:0:c093::2 ; CONFIDENCE 1/10
+15 httpd515.mandint.org(2001:620:607:5110::31) 1476

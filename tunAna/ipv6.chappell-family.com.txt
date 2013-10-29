@@ -1,0 +1,26 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 (2001:252:0:302::2) 1500
+11 10gigabitethernet16-5.core1.lax2.he.net(2001:470:0:2a2::1) 1500
+12 10gigabitethernet2-1.core1.lax1.he.net(2001:470:0:72::1) 1500
+13 10gigabitethernet10-8.core1.nyc4.he.net(2001:470:0:10e::2) 1500
+14 10gigabitethernet6-4.core1.lon1.he.net(2001:470:0:128::2) 1500
+15 linx.bb-c.the.lon.gb.oneandone.net(2001:7f8:4::2170:1) 1500
+16 te-1-3.bb-c.bap.rhr.de.oneandone.net(2001:8d8:0:2::1) 1500
+linx.bb-c.the.lon.gb.oneandone.net(195.66.224.98) -> te-1-3.bb-c.bap.rhr.de.oneandone.net(212.227.120.49)
+s2----12001:7f8:4::2170:1 -> 2001:8d8:0:2::1 ; CONFIDENCE 1/10
+17 ae-2.gw-dista-b.bap.rhr.de.oneandone.net(2001:8d8:0:a::ab) 1500
+te-1-3.bb-c.bap.rhr.de.oneandone.net(212.227.120.49) -> ae-2.gw-dista-b.bap.rhr.de.oneandone.net(212.227.122.12)
+2001:8d8:0:2::1 -> 2001:8d8:0:a::ab ; CONFIDENCE 1/10
+18 vl-1991.gw-ps6.bap.rhr.de.oneandone.net(2001:8d8:0:f::15) 1500
+ae-2.gw-dista-b.bap.rhr.de.oneandone.net(212.227.122.12) -> vl-1991.gw-ps6.bap.rhr.de.oneandone.net(217.160.127.71)
+2001:8d8:0:a::ab -> 2001:8d8:0:f::15 ; CONFIDENCE 1/10
+19 (2001:8d8:1000:5070:b524:ef6f:fe50:81e) 1500

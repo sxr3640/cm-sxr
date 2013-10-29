@@ -1,0 +1,30 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 orientplus-gw.mx1.lon.uk.geant.net(2001:798:28:10aa::25) 1500
+11 ae0.mx1.ams.nl.geant.net(2001:798:cc:2801:2201::2) 1500
+Iniected PingIniected PingDying Packet
+Dying Packet
+resolved tunnel with DNS
+orientplus-gw.mx1.lon.uk.geant.net(62.40.125.101) -> ae0.mx1.ams.nl.geant.net(62.40.98.81)
+s2----1
+2001:798:28:10aa::25 -> 2001:798:cc:2801:2201::2 ; CONFIDENCE 1/10
+12 so-4-0-0.rt1.fra.de.geant2.net(2001:798:cc:1401:2201::9) 1500
+Iniected PingIniected PingDying Packet
+Dying Packet
+resolved tunnel with DNS
+ae0.mx1.ams.nl.geant.net(62.40.98.81) -> ae0.mx1.fra.de.geant.net(62.40.98.128)
+2001:798:cc:2801:2201::2 -> 2001:798:cc:1401:2201::9 ; CONFIDENCE 1/10
+13 (2001:798:cc:1401:2301::6) 1500
+14 (2001:798:23:10aa::a) 1500
+15 z-poznan-gw1.icm.10gb.rtr.pionier.gov.pl(2001:b10:c000:204::2) 1500
+16 sixxs.icm-r1.rtr.core.icm.edu.pl(2001:6a0:1:1::2) 1500
+17 gw-519.waw-01.pl.sixxs.net(2001:6a0:200:206::1) 1280
+18 cl-519.waw-01.pl.sixxs.net(2001:6a0:200:206::2) 1280

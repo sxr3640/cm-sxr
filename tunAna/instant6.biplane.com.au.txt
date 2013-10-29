@@ -1,0 +1,31 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 (2001:252:0:302::2) 1500
+11 10gigabitethernet16-5.core1.lax2.he.net(2001:470:0:2a2::1) 1500
+12 10gigabitethernet2-1.core1.lax1.he.net(2001:470:0:72::1) 1500
+13 100gigabitethernet15-1.core1.sjc2.he.net(2001:470:0:2b7::1) 1500
+14 xe-0.equinix.snjsca04.us.bb.gin.ntt.net(2001:504:0:1::2914:1) 1500
+15 ae-7.r20.snjsca04.us.bb.gin.ntt.net(2001:418:0:2000::2ed) 1500
+16 ae-4.r21.lsanca03.us.bb.gin.ntt.net(2001:418:0:2000::18d) 1500
+ae-7.r20.snjsca04.us.bb.gin.ntt.net(129.250.5.52) -> ae-4.r21.lsanca03.us.bb.gin.ntt.net(129.250.6.10)
+s2----12001:418:0:2000::2ed -> 2001:418:0:2000::18d ; CONFIDENCE 1/10
+17 xe-0-0-0.r02.lsanca03.us.bb.gin.ntt.net(2001:418:0:2000::ea) 1500
+ae-4.r21.lsanca03.us.bb.gin.ntt.net(129.250.6.10) -> xe-0-0-0.r02.lsanca03.us.bb.gin.ntt.net(129.250.2.190)
+2001:418:0:2000::18d -> 2001:418:0:2000::ea ; CONFIDENCE 1/10
+18 p16-6-0-3.r05.sydnau01.au.bb.gin.ntt.net(2001:218:0:2000::20a) 1500
+xe-0-0-0.r02.lsanca03.us.bb.gin.ntt.net(129.250.2.190) -> p16-6-0-3.r05.sydnau01.au.bb.gin.ntt.net(129.250.3.193)
+2001:418:0:2000::ea -> 2001:218:0:2000::20a ; CONFIDENCE 1/10
+19 xe-0-1-0.a06.sydnau01.au.ra.gin.ntt.net(2001:218:0:6000::11a) 1500
+p16-6-0-3.r05.sydnau01.au.bb.gin.ntt.net(129.250.3.193) -> xe-0-1-0.a06.sydnau01.au.ra.gin.ntt.net(202.68.64.21)
+2001:218:0:2000::20a -> 2001:218:0:6000::11a ; CONFIDENCE 1/10
+20 (2406:a000:ffff:ffff::1) 1500
+21 (2406:a000:ffff:ffff::2) 1500
+22 (2406:a000:6::1009) 1500

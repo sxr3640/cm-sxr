@@ -1,0 +1,42 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 (2001:252:0:302::2) 1500
+11 10gigabitethernet16-5.core1.lax2.he.net(2001:470:0:2a2::1) 1500
+12 10gigabitethernet9-5.core1.sjc2.he.net(2001:470:0:16a::1) 1500
+13 sjca-s1-rou-1030.US.eurorings.net(2001:504:0:1::286:1) 1500
+14 sjca-s1-rou-1041.US.eurorings.net(2001:680:0:134:222:226:112:2) 1500
+sjca-s1-rou-1030.US.eurorings.net(134.222.86.222) -> sjca-s1-rou-1041.US.eurorings.net(134.222.85.125)
+s2----12001:680::134:222:86:222 -> 2001:680::134:222:85:125 ; CONFIDENCE 1/10
+15 chg-s1-rou-1041.US.eurorings.net(2001:680:0:134:222:226:128:2) 1500
+sjca-s1-rou-1041.US.eurorings.net(134.222.85.125) -> chg-s1-rou-1041.US.eurorings.net(134.222.85.126)
+2001:680::134:222:85:125 -> 2001:680::134:222:85:126 ; CONFIDENCE 1/10
+16 chg-s1-rou-1001.US.eurorings.net(::ffff:134.222.226.137) 1500
+chg-s1-rou-1041.US.eurorings.net(134.222.85.126) -> chg-s1-rou-1001.US.eurorings.net(134.222.86.223)
+2001:680::134:222:85:126 -> 2001:680::134:222:86:223 ; CONFIDENCE 1/10
+17 nyk-s1-rou-1001.US.eurorings.net(2001:680:0:134:222:228:176:1) 1500
+chg-s1-rou-1001.US.eurorings.net(134.222.86.223) -> nyk-s1-rou-1001.US.eurorings.net(134.222.86.229)
+2001:680::134:222:86:223 -> 2001:680::134:222:86:229 ; CONFIDENCE 1/10
+18 (2001:680:0:134:222:226:160:2) 1500
+19 kehl-s2-rou-1103.DE.eurorings.net(2001:680:0:134:222:227:120:1) 1500
+20 mchn-s1-rou-1102.DE.eurorings.net(2001:680:0:134:222:230:240:1) 1500
+kehl-s2-rou-1103.DE.eurorings.net(134.222.85.217) -> mchn-s1-rou-1102.DE.eurorings.net(134.222.85.224)
+2001:680::134:222:85:217 -> 2001:680::134:222:85:224 ; CONFIDENCE 1/10
+21 mchn-s1-rou-1041.DE.eurorings.net(2001:680:0:134:222:229:228:2) 1500
+mchn-s1-rou-1102.DE.eurorings.net(134.222.85.224) -> mchn-s1-rou-1041.DE.eurorings.net(134.222.85.118)
+2001:680::134:222:85:224 -> 2001:680::134:222:85:118 ; CONFIDENCE 1/10
+22 kpn2-gw.teleport-iabg.de(2001:680:0:800f::c) 1500
+mchn-s1-rou-1041.DE.eurorings.net(134.222.85.118) -> kpn2-gw.teleport-iabg.de(134.222.112.76)
+2001:680::134:222:85:118 -> 2001:680:0:8008::3 ; CONFIDENCE 1/10
+23 access6-gi-0-2.teleport-iabg.de(2001:1b10:0:f:0:12:26:2) 1500
+24 parsun-gw.cust.teleport-iabg.de(2001:1b10:1fff:9::2) 1500
+25 parsun-gw.cust.teleport-iabg.de(2001:1b10:1fff:9::2) 1480
+26 (2a00:1ce0:0:5::3) 1480
+27 shabdiznet.com(2a00:1ce0:0:1::2) 1480

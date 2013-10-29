@@ -1,0 +1,25 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1480
+2 (2402:f000:0:844::69) 1480
+3 (2402:f000:0:2b8::186) 1480
+4 (2402:f000:0:420::33) 1480
+5 cernet2.net(2001:da8:a0:1002::1) 1480
+6 cernet2.net(2001:da8:a0:1::1) 1480
+7 (2001:da8:1:501::1) 1480
+8 (2001:252:0:2::101) 1480
+9 (2001:252:0:100::2) 1480
+10 (2001:252:0:302::2) 1480
+11 10gigabitethernet16-5.core1.lax2.he.net(2001:470:0:2a2::1) 1480
+12 10gigabitethernet2-1.core1.lax1.he.net(2001:470:0:72::1) 1480
+Iniected PingIniected PingDying Packet
+Dying Packet
+13 10gigabitethernet4-2.core3.fmt2.he.net(2001:470:0:18d::1) 1480
+Iniected PingIniected PingDying Packet
+Dying Packet
+14 10gigabitethernet1-3.core1.fmt2.he.net(2001:470:0:23b::2) 1480
+Iniected PingIniected PingDying Packet
+Dying Packet
+15 tserv1.fmt2.he.net(2001:470:0:45::2) 1480
+Iniected PingIniected PingDying Packet
+Dying Packet
+16 bbs-swdyz-out.www.org.ht(2001:470:8066::1) 1480

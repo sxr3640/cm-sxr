@@ -1,0 +1,33 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 *
+9 (2001:252:0:100::2) 1500
+10 orientplus-gw.mx1.lon.uk.geant.net(2001:798:28:10aa::25) 1500
+11 ae0.mx1.par.fr.geant.net(2001:798:cc:2801:1801::2) 1500
+orientplus-gw.mx1.lon.uk.geant.net(62.40.125.101) -> ae0.mx1.par.fr.geant.net(62.40.98.77)
+s2----12001:798:28:10aa::25 -> 2001:798:cc:2801:1801::2 ; CONFIDENCE 1/10
+12 ae2.mx1.gen.ch.geant.net(2001:798:cc:1801:1201::6) 1500
+ae0.mx1.par.fr.geant.net(62.40.98.77) -> ae2.mx1.gen.ch.geant.net(62.40.98.153)
+2001:798:cc:2801:1801::2 -> 2001:798:cc:1801:1201::6 ; CONFIDENCE 1/10
+13 (2001:798:cc:1201:1e01::6) 1500
+14 xe-0-0-1.mx1.vie.at.geant.net(2001:798:cc:1001:1e01::5) 1500
+15 ae2.mx2.zag.hr.geant.net(2001:798:cc:3201:1001::a) 1500
+xe-0-0-1.mx1.vie.at.geant.net(62.40.98.149) -> ae2.mx2.zag.hr.geant.net(62.40.98.35)
+s2----12001:798:cc:1e01:1001::1 -> 2001:798:cc:3201:1001::a ; CONFIDENCE 1/10
+16 lo0.mx1.zag.hr.geant.net(2001:798:2d:20ff::1) 1500
+ae2.mx2.zag.hr.geant.net(62.40.98.35) -> lo0.mx1.zag.hr.geant.net(62.40.96.7)
+2001:798:cc:3201:1001::a -> 2001:798:2d:20ff::1 ; CONFIDENCE 1/10
+17 carnet-gw.mx1.zag.hr.geant.net(2001:798:10:10aa::a) 1500
+lo0.mx1.zag.hr.geant.net(62.40.96.7) -> carnet-gw.mx1.zag.hr.geant.net(62.40.124.10)
+2001:798:2d:20ff::1 -> 2001:798:10:10aa::a ; CONFIDENCE 1/10
+18 CN-Srce-02-RO.core.carnet.hr(2001:b68:ff:ff:a2b:0:20:2) 1500
+19 CN-ACC-SRCE-02.core.carnet.hr(2001:b68:ff:ff:a2b:0:4d:2) 1500
+20 CN-Nsk-02-ES.core.carnet.hr(2001:b68:ff:ff:a2b:0:6:2) 1500
+21 Cp3-NSK1-ES-R11.carpriv3.carnet.hr(2001:b68:ff:ff:a2b:0:28:2) 1500
+22 bwm.CARNet.hr(2001:b68:ff:1::85) 1500

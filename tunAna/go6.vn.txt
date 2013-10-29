@@ -1,0 +1,30 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 (2001:252:0:302::2) 1500
+11 10gigabitethernet16-5.core1.lax2.he.net(2001:470:0:2a2::1) 1500
+12 10gigabitethernet9-5.core1.sjc2.he.net(2001:470:0:16a::1) 1500
+13 xe-0.equinix.snjsca04.us.bb.gin.ntt.net(2001:504:0:1::2914:1) 1500
+14 ae-7.r20.snjsca04.us.bb.gin.ntt.net(2001:418:0:2000::2ed) 1500
+15 as-1.r20.osakjp01.jp.bb.gin.ntt.net(2001:218:0:2000::7e) 1500
+ae-7.r20.snjsca04.us.bb.gin.ntt.net(129.250.5.52) -> as-1.r20.osakjp01.jp.bb.gin.ntt.net(129.250.2.165)
+s2----12001:418:0:2000::2ed -> 2001:218:0:2000::7e ; CONFIDENCE 1/10
+16 ae-1.r22.osakjp01.jp.bb.gin.ntt.net(2001:218:0:2000::fa) 1500
+as-1.r20.osakjp01.jp.bb.gin.ntt.net(129.250.2.165) -> ae-1.r22.osakjp01.jp.bb.gin.ntt.net(129.250.2.3)
+2001:218:0:2000::7e -> 2001:218:0:2000::fa ; CONFIDENCE 1/10
+17 as-5.r20.tkokhk01.hk.bb.gin.ntt.net(2001:218:0:2000::22a) 1500
+ae-1.r22.osakjp01.jp.bb.gin.ntt.net(129.250.2.3) -> as-5.r20.tkokhk01.hk.bb.gin.ntt.net(129.250.2.121)
+2001:218:0:2000::fa -> 2001:218:0:2000::22a ; CONFIDENCE 1/10
+18 ae-4.r02.chwahk02.hk.bb.gin.ntt.net(2001:218:0:2000::e2) 1500
+as-5.r20.tkokhk01.hk.bb.gin.ntt.net(129.250.2.121) -> ae-4.r02.chwahk02.hk.bb.gin.ntt.net(129.250.4.7)
+2001:218:0:2000::22a -> 2001:218:0:2000::e2 ; CONFIDENCE 1/10
+19 (2001:218:7000:5000::93) 1500
+20 ns1.netnam.vn(2401:e800::10) 1500
+21 (2401:e800:0:1::86) 1500

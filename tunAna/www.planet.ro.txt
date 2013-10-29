@@ -1,0 +1,35 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 (2001:252:0:302::2) 1500
+11 10gigabitethernet16-5.core1.lax2.he.net(2001:470:0:2a2::1) 1500
+12 10gigabitethernet2-1.core1.lax1.he.net(2001:470:0:72::1) 1500
+Iniected PingIniected PingDying Packet
+Dying Packet
+13 100gigabitethernet15-1.core1.sjc2.he.net(2001:470:0:2b7::1) 1500
+Iniected PingIniected PingDying Packet
+Dying Packet
+14 level3.v310.core1.sjc2.he.net(2001:470:0:203::2) 1500
+15 vl-60.edge1.SanJose1.Level3.net(2001:1900:1a:5::8) 1500
+16 (2001:1900:4:1::5e) 1500
+17 vl-4086.edge3.London1.Level3.net(2001:1900:6:1::11) 1500
+18 vl-4080.edge4.London1.Level3.net(2001:1900:5:1::102) 1500
+19 vl-4060.edge4.Amsterdam1.Level3.net(2001:1900:5:1::206) 1500
+20 vl-4080.edge3.Amsterdam1.Level3.net(2001:1900:5:1::109) 1500
+21 vl-4040.car1.Dusseldorf1.Level3.net(2001:1900:5:1::20e) 1500
+22 vl-4080.car2.Dusseldorf1.Level3.net(2001:1900:5:1::112) 1500
+23 vl-4061.car1.Berlin1.Level3.net(2001:1900:5:1::22e) 1500
+24 vl-4043.car1.Bucharest1.Level3.net(2001:1900:5:1::2aa) 1500
+25 INES-GROUP.car1.Bucharest1.Level3.net(2001:1900:5:2:2::16a) 1500
+26 VLAN-202.B-CORE-N.iNES.RO(2a02:2a00:2a00::2) 1500
+27 (2a02:2a00:2a00:518f::2) 1500
+28 *
+29 *
+30 *

@@ -1,0 +1,9 @@
+#!bin/bash
+while read -r str
+do
+len=$[${#str}-1]
+echo $len
+echo $str
+echo str=${str:0:len}
+#echo $str|cut -c1-$len
+  done<ipv6add.txt

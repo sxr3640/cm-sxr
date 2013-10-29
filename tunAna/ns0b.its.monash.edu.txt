@@ -1,0 +1,31 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:100::2) 1500
+10 bj-ge-03-v6.bb.tein3.net(2001:254:1:8::1) 1500
+11 hk-ge-01-v6.bb.tein3.net(2001:254:1:7::2) 1500
+12 sg-xe-03-v6.bb.tein3.net(2001:254:1:18::2) 1500
+13 au-pr-v6.bb.tein3.net(2001:254:8001:10::2) 1500
+14 so-4-1-0.bb1.b.syd.aarnet.net.au(2001:388:1:39::1) 1500
+15 so-0-1-0.bb1.b.cbr.aarnet.net.au(2001:388:1:9::2) 1500
+so-4-1-0.bb1.b.syd.aarnet.net.au(202.158.194.244) -> so-0-1-0.bb1.b.cbr.aarnet.net.au(202.158.194.30)
+s2----12001:388:1:39::1 -> 2001:388:1:9::2 ; CONFIDENCE 1/10
+16 tengigabitethernet2-1.er2.monash.cpe.aarnet.net.au(2001:388:1:302b:223:5eff:fed8:b100) 1500
+so-0-1-0.bb1.b.cbr.aarnet.net.au(202.158.194.30) -> tengigabitethernet2-1.er2.monash.cpe.aarnet.net.au(202.158.200.98)
+2001:388:1:9::2 -> 2001:388:1:302b:223:5eff:fed8:b100 ; CONFIDENCE 1/10
+17 so-0-1-0.bb1.b.mel.aarnet.net.au(2001:388:1:c::2) 1500
+tengigabitethernet2-1.er2.monash.cpe.aarnet.net.au(202.158.200.98) -> so-0-1-0.bb1.b.mel.aarnet.net.au(202.158.194.42)
+2001:388:1:302b:223:5eff:fed8:b100 -> 2001:388:1:c::2 ; CONFIDENCE 1/10
+18 drc0-gw-v526.net.monash.edu(2001:388:608c:1a::2) 1500
+so-0-1-0.bb1.b.mel.aarnet.net.au(202.158.194.42) -> drc0-gw-v526.net.monash.edu(130.194.28.105)
+2001:388:1:c::2 -> 2001:388:608c:1a::2 ; CONFIDENCE 1/10
+19 gw1.er2.monash.cpe.aarnet.net.au(2001:388:1:301a::2) 1500
+drc0-gw-v526.net.monash.edu(130.194.28.105) -> gw1.er2.monash.cpe.aarnet.net.au(202.158.200.150)
+2001:388:608c:1a::2 -> 2001:388:1:301a::2 ; CONFIDENCE 1/10
+20 ns0b.its.monash.edu(2001:388:608c:88a::232) 1500

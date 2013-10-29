@@ -1,0 +1,24 @@
+30 Hops MAX
+1 (2402:f000:1:4410::1) 1500
+2 (2402:f000:0:844::69) 1500
+3 (2402:f000:0:2b8::186) 1500
+4 (2402:f000:0:420::33) 1500
+5 cernet2.net(2001:da8:a0:1002::1) 1500
+6 cernet2.net(2001:da8:a0:1::1) 1500
+7 (2001:da8:1:501::1) 1500
+8 (2001:252:0:2::101) 1500
+9 (2001:252:0:101::2) 1500
+10 tpr5-ge-1-0-0-137.jp.apan.net(2001:200:e000:137::7660:1) 1500
+11 (2001:2f8:1:0:2::1) 1500
+12 tokyo-dc-rm-ae4-vlan10.s4.sinet.ad.jp(2001:2f8:fff0:d::1) 1500
+13 sendai-dc-rm-ae1-vlan10.s4.sinet.ad.jp(2001:2f8:fff0:2::1) 1500
+Iniected PingIniected PingDying Packet
+Dying Packet
+resolved tunnel with DNS
+tokyo-dc-rm-ae4-vlan10.s4.sinet.ad.jp(150.99.2.53) -> sendai-dc-rm-ae1-vlan10.s4.sinet.ad.jp(150.99.2.9)
+s2----1
+2001:2f8:fff0:d::1 -> 2001:2f8:fff0:2::1 ; CONFIDENCE 1/10
+14 (2001:2f8:ff00:5e::2) 1500
+15 (2001:df0:25e:ff00::2) 1500
+16 (2001:df0:25e:ef10::2) 1500
+17 (2001:df0:25e:3001::2:1) 1500
