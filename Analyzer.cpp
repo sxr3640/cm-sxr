@@ -274,11 +274,11 @@ string Analyzer::Receiver(int recvfd) {
       }
       break;
       case (ICMP6_PACKET_TOO_BIG) : { //path mtu discovery
-        sequence--;
         struct icmp6_hdr *icmp6_2;
         icmp6_2= (struct icmp6_hdr* ) (my_buffer + sizeof(struct icmp6_hdr) + sizeof(struct ip6_hdr));
         if ((icmp6_2->icmp6_id==pid) && (icmp6_2->icmp6_seq==sequence)) {
           mtu = ntohl(icmp6->icmp6_mtu); //let's determine the future mtu
+         sequence--;
           char abuf[INET6_ADDRSTRLEN];
           sender_address = (struct sockaddr_in6 *)&ss;
           (void) inet_ntop(AF_INET6, &sender_address->sin6_addr , abuf , sizeof(abuf));
